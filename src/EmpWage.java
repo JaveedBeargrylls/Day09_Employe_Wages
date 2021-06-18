@@ -1,19 +1,23 @@
 public class EmpWage{
-    public static void main(String[] args){
-        int IS_FULL_TIME = 1;
-        int Wage_per_hour = 20;
-        int Full_work_hour = 8;
-        int Emp_wage ;
-        double empCheck = Math.floor(Math.random()*10)%2;
-        // Calculating the daily wage of Employee
-        if ( empCheck == IS_FULL_TIME )
-            //Employee is Present
-            Emp_wage = 1;
-        else
-            //Employee is Absent
-            Emp_wage = 0;
-
-        int Emp = Emp_wage * Wage_per_hour * Full_work_hour;
+    public static final int IS_PART_TIME = 1;
+    public static final int IS_FULL_TIME = 2;
+    public static final int Wage_per_hour = 20;
+    public static void main (String[] args){
+        System.out.println(" Welcome To Employee Wage");
+        int Emp_wage_hour;
+        int empCheck = (int) Math.floor(Math.random()*10)%3;
+        // used Switch case for Employee_Wage
+        switch (empCheck) {
+            case IS_FULL_TIME:
+                Emp_wage_hour = 8 ;
+                break;
+            case IS_PART_TIME:
+                Emp_wage_hour = 4;
+                break;
+            default:
+                Emp_wage_hour = 0;
+        }
+        int Emp = Emp_wage_hour * Wage_per_hour;
         System.out.println("Wage of a employee per day : " + Emp);
     }
 }
