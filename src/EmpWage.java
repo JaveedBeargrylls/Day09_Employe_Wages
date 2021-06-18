@@ -28,4 +28,4 @@ public class EmpWage{
             }
             System.out.println("Monthly Wages of an Employee : " + Monthly_wage);
         }
-    }
+}
