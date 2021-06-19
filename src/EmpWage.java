@@ -25,6 +25,7 @@ public class EmpWage{
             System.out.println("Wage of a employee at day "+Working_days+"\t"+ Emp + "\t" + "Work time :"+" "+Emp_wage_hour);
             Monthly_wage += Emp;
         }
-        System.out.println("Monthly Wages of an Employee : " + Monthly_wage+"\n"+"Monthly Working Hours of an employee : "+total_emp_hours+"hours");
+       System.out.println("Monthly Wages of an Employee : " + Monthly_wage+"\n"+"Monthly Working Hours of an employee : "+total_emp_hours+"hours");
     }
 }
+
