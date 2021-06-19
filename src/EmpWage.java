@@ -14,16 +14,11 @@ public class EmpWage{
             Working_days++;
             int empCheck = (int) Math.floor(Math.random()*10)%3;
             // checking of his work time
-            switch (empCheck) {
-                case IS_FULL_TIME:
-                    Emp_wage_hour = 8 ;
-                    break;
-                case IS_PART_TIME:
-                    Emp_wage_hour = 4;
-                    break;
-                default:
-                    Emp_wage_hour = 0;
-            }
+            Emp_wage_hour = switch (empCheck) {
+                case IS_FULL_TIME -> 8;
+                case IS_PART_TIME -> 4;
+                default -> 0;
+            };
             // calculation of wage and time of an Employee in a month
             total_emp_hours += Emp_wage_hour;
             int Emp = Emp_wage_hour * Wage_per_hour;
